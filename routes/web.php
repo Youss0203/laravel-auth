@@ -30,5 +30,6 @@ Route::middleware('auth')
     ->prefix('admin')
     ->group(function () {
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+        Route::get('/projects/deleted', [AdminProjectController::class, 'deletedIndex'])->name('projects.deleted.index');
         Route::resource('/projects', AdminProjectController::class);
     });

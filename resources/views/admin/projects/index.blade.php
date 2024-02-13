@@ -57,12 +57,12 @@
                                     </button>
                                 </a>
                                 <a href="{{ route('admin.projects.create', $project) }}">
-                                    <button class="btn btn-sm btn-primary mx-1">
+                                    <button class="btn btn-sm btn-primary">
                                         Create
                                     </button>
                                 </a>
                                  <!-- Button trigger modal -->
-                                 <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal-{{ $project->id }}">
+                                 <button type="button" class="btn btn-warning btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal-{{ $project->id }}">
                                     Delete
                                 </button>
 

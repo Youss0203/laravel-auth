@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('descrizione');
             $table->float('giorni');
             $table->string('linguaggi_usati', 50);
-            $table->string('repo_url', 200);
+            $table->string('repo_url', 200,);
             $table->timestamps();
         });
     }

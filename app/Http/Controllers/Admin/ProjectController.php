@@ -25,7 +25,6 @@ class ProjectController extends Controller
     }
 
 
-
     public function store(Request $request)
     {
         $newProject = Project::create($request->all());
@@ -60,5 +59,11 @@ class ProjectController extends Controller
     {
         $project->delete();
         return redirect()->route('admin.projects.index');
+    }
+
+    public function deletedIndex(){
+        $projects = Project::onlyTrashed()->get();
+        
+        return view('admin.projects.deleted-index', compact('projects'));
     }
 }
