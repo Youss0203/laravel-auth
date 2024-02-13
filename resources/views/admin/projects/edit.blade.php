@@ -23,18 +23,18 @@
                 </div>
 
                 <div class="mb-3 input-group">
-                    <label for="date" class="input-group-text">Date:</label>
-                    <input class="form-control" type="date" name="giorni" id="giorni" value="{{ old('giorni', $project->linguaggi_usati)}}">
+                    <label for="date" class="input-group-text">Giorni</label>
+                    <input class="form-control" type="text" name="giorni" id="giorni" value="{{ old('giorni', $project->giorni)}}">
                 </div>
 
                 <div class="mb-3 input-group">
-                    <label for="post_image" class="input-group-text">Repo Url</label>
+                    <label for="post_image" class="input-group-text">Linguaggi usati:</label>
                     <input class="form-control" type="text" name="linguaggi_usati" id="linguaggi_usati" value="{{ old('linguaggi_usati', $project->linguaggi_usati)}}">
                 </div>
 
                 <div class="mb-3 input-group">
-                    <label for="date" class="input-group-text">Date:</label>
-                    <input class="form-control" type="text" name="Repo_url" id="Repo_url" value="{{ old('Repo_url', $project->Repo_url)}}">
+                    <label for="date" class="input-group-text">Repo Url:</label>
+                    <input class="form-control" type="text" name="repo_url" id="repo_url" value="{{ old('repo_url', $project->repo_url)}}">
                 </div>
                 <div class="mb-3 input-group">
                     <button type="submit" class="btn btn-xl btn-primary">
