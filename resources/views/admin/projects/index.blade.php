@@ -47,7 +47,7 @@
                             </td>
                             <td class="d-flex p-3">
                                 <a href="{{ route('admin.projects.show', $project) }}">
-                                    <button class="btn btn-sm btn-primary mx-1">
+                                    <button class="btn btn-sm btn-primary ">
                                         View
                                     </button>
                                 </a>
@@ -56,14 +56,37 @@
                                         Edit
                                     </button>
                                 </a>
-                                <form class="d-inline-block" action="{{ route('admin.projects.destroy', $project) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
+                                 <!-- Button trigger modal -->
+                                 <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal-{{ $project->id }}">
+                                    Delete
+                                </button>
 
-                                    <button class="btn btn-sm btn-warning" type="submit">
-                                        Delete
-                                    </button>
-                                </form>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal-{{ $project->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Deleting post...</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Do you really want to delete {{ $project->nome }}?
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                                        <form class="d-inline-block" action="{{ route('admin.projects.destroy', $project) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+
+                                            <button class="btn btn-danger" type="submit">
+                                                Delete
+                                            </button>
+                                        </form>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                     @empty

@@ -19,12 +19,17 @@ class ProjectController extends Controller
         return view('admin.projects.index', compact('projects'));
     }
 
+    public function create()
+    {
+        return view('admin.projects.create');
+    }
+
 
 
     public function store(Request $request)
     {
         $newProject = Project::create($request->all());
-        return redirect()->route('admin.projects.show', $newProject);
+        return redirect()->route('admin.projects.show', $project);
     }
 
 
