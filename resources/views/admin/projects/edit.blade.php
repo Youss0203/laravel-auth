@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-7">
-            @include('partials.errors')
+            
 
             <form action="{{ route('admin.projects.update', $project)}}" method="POST">
                 @csrf

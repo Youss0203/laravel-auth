@@ -41,18 +41,22 @@
                             <td>
                                 {{ $project->giorni }}
                             </td>
+                            <td>{{ $project->linguaggi_usati }}</td>
                             <td>
+                                <a href="{{ $project->repo_url}}">{{ $project->repo_url}}</a>
+                            </td>
+                            <td class="d-flex p-3">
                                 <a href="{{ route('admin.projects.show', $project) }}">
-                                    <button class="btn btn-sm btn-primary">
+                                    <button class="btn btn-sm btn-primary mx-1">
                                         View
                                     </button>
                                 </a>
-                                <a href="{{ route('admin.projects.edit', $post) }}">
-                                    <button class="btn btn-sm btn-success">
+                                <a href="{{ route('admin.projects.edit', $project) }}">
+                                    <button class="btn btn-sm btn-success mx-1">
                                         Edit
                                     </button>
                                 </a>
-                                <form class="d-inline-block" action="{{ route('admin.posts.destroy', $post) }}" method="POST">
+                                <form class="d-inline-block" action="{{ route('admin.projects.destroy', $project) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
 

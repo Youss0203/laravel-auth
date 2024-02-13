@@ -28,7 +28,7 @@
             <div class="p-5">
                 <p>
                     <em>
-                        {{ $project->Repo_url}}
+                         <a href="{{ $project->repo_url}}">{{ $project->repo_url}}</a>
                     </em>
                 </p>
             </div>
