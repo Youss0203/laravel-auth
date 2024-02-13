@@ -47,13 +47,18 @@
                             </td>
                             <td class="d-flex p-3">
                                 <a href="{{ route('admin.projects.show', $project) }}">
-                                    <button class="btn btn-sm btn-primary ">
+                                    <button class="btn btn-sm btn-info ">
                                         View
                                     </button>
                                 </a>
                                 <a href="{{ route('admin.projects.edit', $project) }}">
                                     <button class="btn btn-sm btn-success mx-1">
                                         Edit
+                                    </button>
+                                </a>
+                                <a href="{{ route('admin.projects.create', $project) }}">
+                                    <button class="btn btn-sm btn-primary mx-1">
+                                        Create
                                     </button>
                                 </a>
                                  <!-- Button trigger modal -->
