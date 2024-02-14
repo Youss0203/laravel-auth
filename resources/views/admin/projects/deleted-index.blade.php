@@ -39,13 +39,19 @@
                             {{ $project->id }}
                         </th>
                         <td>
-                            {{ $project->name_project }}
+                            {{ $project->nome }}
                         </td>
                         <td>
-                            {{ $project->author }}
+                            {{ $project->descrizione }}
                         </td>
                         <td>
-                            {{ $project->date }}
+                            {{ $project->giorni }}
+                        </td>
+                        <td>
+                            {{ $project->linguaggi_usati }}
+                        </td>
+                        <td>
+                            {{ $project->Repo_url }}
                         </td>
                         <td>
                             <a href="{{ route('admin.projects.deleted.show', $project) }}">

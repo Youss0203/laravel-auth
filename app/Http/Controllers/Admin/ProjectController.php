@@ -66,4 +66,26 @@ class ProjectController extends Controller
         
         return view('admin.projects.deleted-index', compact('projects'));
     }
+
+    public function deletedShow(string $id){
+
+        $project = Project::withTrashed()->where('id', $id)->first();
+        
+        return view('admin.projects.deleted-show', compact('project'));
+    }
+
+    public function deletedRestore(string $id){
+        $project = Project::withTrashed()->where('id', $id)->first();
+        $project->restore();
+    }
+
+    public function deletedDestroy(string $id){
+
+        $project = Project::withTrashed()->where('id', $id)->first();
+
+       
+        $project->forceDelete () ;
+        return redirect () ->route ('admin.projects.deleted.index') ;    
+
+    }
 }
