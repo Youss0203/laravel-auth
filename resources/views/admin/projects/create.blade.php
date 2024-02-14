@@ -40,9 +40,9 @@
             </div>
 
             <div class="mb-3  input-group">
-                <button type="submit" class="btn btn-xl btn-primary">
-                    Crea nuovo progetto
-                </button>
+                    <button class="btn btn-sm btn-success mx-1">
+                        Edit
+                    </button>
             </div>
             <div class="mb-3  input-group">
                 <button type="reset" class="btn btn-xl btn-warning">

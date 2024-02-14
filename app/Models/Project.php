@@ -15,6 +15,6 @@ class Project extends Model
         'descrizione',
         'giorni',
         'linguaggi_usati',
-        'Repo_url',
+        'repo_url',
     ];
 }

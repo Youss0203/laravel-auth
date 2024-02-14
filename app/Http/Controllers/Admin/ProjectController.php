@@ -28,7 +28,7 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $newProject = Project::create($request->all());
-        return redirect()->route('admin.projects.show', $project);
+        return redirect()->route('admin.projects.show', $newProject);
     }
 
 
